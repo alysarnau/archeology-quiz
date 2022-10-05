@@ -80,19 +80,19 @@ function showScore() {
 
 let questions = [
     new Question(
-        "One of the most important archeological sites is Pompeii. What happened in 79 AD that caused so many artifacts to be preserved?", ["Artists created mini-replicas", "A tsunami washed away all the dirt", "The city was preserved under volcanic ash", "Someone left a note not to disturb anything and people listened"], "The city was preserved under volcanic ash"
+        "One of the most well-known archeological sites is Pompeii. In 79 AD, what happened that caused so many artifacts to be preserved?", ["Artists created mini-replicas", "A tsunami washed away all the dirt", "The city was preserved under volcanic ash", "Someone left a note not to disturb anything and people listened"], "The city was preserved under volcanic ash"
     ),
     new Question(
-        "Can you name the famous slab, originally discovered in Egypt, that has text from three different languages inscribed on it?", ["Camera Obsura", "Tablet of Babel", "Rosetta Stone", "Valun Rock"], "Rosetta Stone"
+        "We can begin to understand Ancient Egyptian Hieroglyphics thanks to this stone, which is inscribed with three different languages.", ["Camera Obsura", "Tablet of Babel", "Rosetta Stone", "Valun Rock"], "Rosetta Stone"
     ),
     new Question(
-        "Discovered in Shanxi, a province in Central China, were ancient artifacts made out terra cotta. What was their shape?", ["Dragons", "Warriors", "Brewery Pots", "Birds in Flight"], "Warriors"
+        "In 1974 in Shaanxi, a province in Central China, many ancient artifacts were found made out terra cotta. What was their most common shape?", ["Dragons", "Warriors", "Brewery Pots", "Birds in Flight"], "Warriors"
     ),
     new Question(
-        "The Antikythera Mechanism was discovered on an island in the southern Aegean sea in about 1900 and is estimated to be about 2000 years old. Of the following functions, which one is LEAST LIKELY to be one the mechanism had?", ["Tracking the cycle of Olympiad Games", "Predicting the movement of the Planets", "Tuning a Lyre", "Predicting Eclipses"], "Tuning a Lyre"
+        "The mysterious Antikythera Mechanism was discovered on an island in the southern Aegean sea in about 1900 and is estimated to be roughly 2000 years old. Of the following functions, which one is LEAST LIKELY to be one the mechanism had?", ["Tracking the cycle of Olympiad Games", "Predicting the movement of the Planets", "Tuning a Lyre", "Predicting Eclipses"], "Tuning a Lyre"
     ),
     new Question(
-        "Otzi is a most interesting find - a mummy of a man who lived sometime between 3400 and 3100 BC was found in the Alps in 1991. He had a myriad of artifacts that were preserved in the ice with him. Which of the following would NOT be one of Otzi's artifacts?", ["A Walkman", "Firestarting Supplies", "Medicinal Herbs",  "Arrow-Repair Supplies"], "A Walkman"
+        "Otzi - a mummy of a man who lived sometime between 3400 and 3100 BC - was found in the Alps in 1991 by some very surprised hikers. He had a myriad of artifacts that were preserved in the ice with him. Which of the following would NOT be one of Otzi's artifacts?", ["A Walkman", "Firestarting Supplies", "Medicinal Herbs",  "Arrow-Repair Supplies"], "A Walkman"
     )
 ]
 
