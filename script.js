@@ -7,7 +7,6 @@ class Quiz {
     }
 
     getQuestionIndex() {
-        // what question are we on
         return this.questions[this.questionIndex];
     }
 
@@ -31,7 +30,6 @@ class Question {
     }
 
     isCorrectAnswer(choice) {
-        // returns bool
         return this.answer === choice;
     }
 }
@@ -64,14 +62,14 @@ function guess(id, guess) {
 function showProgress() {
     let currentQuestionNumber = quiz.questionIndex + 1;
     let progressElement = document.getElementById("progress")
-    progressElement.innerHTML = `Question ${currentQuestionNumber} of ${quiz.question.length}`
+    progressElement.innerHTML = `Question ${currentQuestionNumber} of ${quiz.questions.length}`
 }
 
 function showScore() {
     let quizEndHTML = 
         `
             <h1>Quiz Completed!</h1>
-            <h2 id="score">Your Score: ${quiz.score} of ${quiz.question.length}</h2>
+            <h2 id="score">Your Score: ${quiz.score} of ${quiz.questions.length}</h2>
             <div class="quiz-repeat">
                 <a href="index.html">Play Again?</a>
             </div>
@@ -80,7 +78,6 @@ function showScore() {
     quizElement.innerHTML = quizEndHTML
 }
 
-// create quiz questions
 let questions = [
     new Question(
         "One of the most important archeological sites is Pompeii. What happened in 79 AD that caused so many artifacts to be preserved?", ["Artists created mini-replicas", "A tsunami washed away all the dirt", "The city was preserved under volcanic ash", "Someone left a note not to disturb anything and people listened"], "The city was preserved under volcanic ash"
@@ -95,9 +92,31 @@ let questions = [
         "The Antikythera Mechanism was discovered on an island in the southern Aegean sea in about 1900 and is estimated to be about 2000 years old. Of the following functions, which one is LEAST LIKELY to be one the mechanism had?", ["Tracking the cycle of Olympiad Games", "Predicting the movement of the Planets", "Tuning a Lyre", "Predicting Eclipses"], "Tuning a Lyre"
     ),
     new Question(
-        "Otzi is a most interesting find - a mummy of a man who lived sometime between 3400 and 3100 BC was found in the Alps in 1991. He had a myriad of artifacts that were preserved in the ice with him. Which of the following would NOT be one of Otzi's artifacts?", ["Firestarting Supplies", "Medicinal Herbs", "A Walkman", "Arrow-Repair Supplies"], "A Walkman"
+        "Otzi is a most interesting find - a mummy of a man who lived sometime between 3400 and 3100 BC was found in the Alps in 1991. He had a myriad of artifacts that were preserved in the ice with him. Which of the following would NOT be one of Otzi's artifacts?", ["A Walkman", "Firestarting Supplies", "Medicinal Herbs",  "Arrow-Repair Supplies"], "A Walkman"
     )
 ]
 
 let quiz = new Quiz(questions);
 displayQuestion();
+
+let time = 5;
+let quizTimeInMinutes = time * 60 * 60
+quizTime = quizTimeInMinutes/60;
+
+let counting = document.getElementById("countdown")
+
+function startCountdown() {
+    let quizTimer = setInterval(function() {
+        if (quizTime <= 0) {
+            clearInterval(quizTimer);
+            showScore();
+        } else {
+            quizTime--;
+            let sec = Math.floor(quizTime % 60)
+            let min = Math.floor((quizTime / 60) % 60)
+            counting.innerHTML = `Time: ${min}:${sec}`
+        }
+    }, 1000) 
+}
+
+startCountdown();
