@@ -80,7 +80,7 @@ function showScore() {
 
 let questions = [
     new Question(
-        "One of the most well-known archeological sites is Pompeii. In 79 AD, what happened that caused so many artifacts to be preserved?", ["Artists created mini-replicas", "A tsunami washed away all the dirt", "The city was preserved under volcanic ash", "Someone left a note not to disturb anything and people listened"], "The city was preserved under volcanic ash"
+        "One of the most well-known archaeological sites is Pompeii. In 79 AD, what happened that caused so many artifacts to be preserved?", ["Artists created mini-replicas", "A tsunami washed away all the dirt", "The city was preserved under volcanic ash", "Someone left a note not to disturb anything and people listened"], "The city was preserved under volcanic ash"
     ),
     new Question(
         "We can begin to understand Ancient Egyptian Hieroglyphics thanks to this stone, which is inscribed with three different languages.", ["Camera Obsura", "Tablet of Babel", "Rosetta Stone", "Valun Rock"], "Rosetta Stone"
